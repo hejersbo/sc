@@ -98,11 +98,13 @@ void next(void)
 		int n;
 		if (*p == '0' && *(p + 1) == 'x') {
 			sscanf((p + 2), "%x%n", &v, &n);
+			n+=2;
 		}
 		else if (*p == '0' && *(p + 1) == 'b') {
 			char bin[32];
 			sscanf((p + 2), "%s%n", &bin[0], &n);
 			v = btoi(bin);
+			n+=2;
 		}
 		else {
 			sscanf(p, "%d%n", &v, &n);
@@ -122,7 +124,7 @@ void next(void)
 		t = *p;
 		p++;
 	}
-	/* printf("next(): t = %d, v = %d, p = %s\n", t, v, p); */
+	printf("next(): t = %d, v = %d, p = %s\n", t, v, p);
 }
 
 int number(void) {
