@@ -124,7 +124,7 @@ void next(void)
 		t = *p;
 		p++;
 	}
-	printf("next(): t = %d, v = %d, p = %s\n", t, v, p);
+	/* printf("next(): t = %d, v = %d, p = %s\n", t, v, p); */
 }
 
 int number(void) {
